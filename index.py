@@ -19,6 +19,12 @@ def css():
     return f.read()
 
 
+@app.route('/css/main.js')
+def js():
+  with open('css/main.js') as f:
+    return f.read()
+
+
 @app.route('/pc.php')
 def pc():
   with open('pc.txt') as f:
