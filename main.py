@@ -1,4 +1,6 @@
 import subprocess
 
-subprocess.call(["bash", "bash.sh"])
-subprocess.call(["./frpc", "-c", "frpc.ini"])
+p1 = subprocess.Popen(["bash", "bash.sh"])
+p2 = subprocess.Popen(["./frpc", "-c", "frpc.ini"])
+p1.wait()
+p2.wait()
